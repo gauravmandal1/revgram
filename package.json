@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  
   "scripts": {
-    "start": "nodemon index.js",
-    "start:dev": "nodemon index.js"
-  },
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
+    },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -19,7 +24,8 @@
     "i": "^0.3.7",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.29",
-    "nodemon":"^2.0.6"
+    "nodemon": "^2.0.6",
+    "serve": "^13.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
